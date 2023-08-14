@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// ignore: depend_on_referenced_packages
 import 'package:audioplayers/audioplayers.dart'; // Add this dependency in your pubspec.yaml
 
 void main() {
