@@ -26,8 +26,7 @@ class RadioPlayerPage extends StatefulWidget {
 class _RadioPlayerPageState extends State<RadioPlayerPage> {
   AudioPlayer audioPlayer = AudioPlayer();
 
-  String radioUrl =
-      'http://ice1.somafm.com/groovesalad-128-mp3'; // SomaFM Groove Salad
+  String radioUrl = 'https://ok.ru/video/6957785947773'; // SomaFM Groove Salad
   // Replace with your radio stream URL
 
   @override
@@ -36,7 +35,9 @@ class _RadioPlayerPageState extends State<RadioPlayerPage> {
     super.dispose();
   }
 
-  Future<void> playRadio() async {}
+  void playRadio() async {
+    await audioPlayer.play(UrlSource(radioUrl));
+  }
 
   void stopRadio() async {
     await audioPlayer.stop();
